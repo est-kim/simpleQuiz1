@@ -3,7 +3,30 @@ const resultsContainer = document.getElementById('results')
 const  submitButton = document.getElementById('submit')
 
 function buildQuiz() {
+    const output = [] // empty variable to store the HTML output
 
+    //for each question... 
+    myQuestions.forEach((currentQuestion, questionNumber) => {
+        const answers = [] //empty variable to store possible list of answers
+
+        //for each available answer... 
+        for(letter in currentQuestion.answers) {
+            //add an HTML radio button
+            answers.push(
+                `<label>
+                <input type="radio" name="question${questionNumber}" value="${letter}">
+                ${letter} :
+                ${currentQuestion.answers[letter]}
+              </label>`
+            )
+        }
+        output.push(
+            `<div class = "question"> ${currentQuestion.question} </div>
+            <div class ="answers"> ${answers.join('')} </div>`
+        )
+
+    })
+    quizContainer.innerHTML = output.join('')
 }
 
 function showResults(){
@@ -117,4 +140,3 @@ const myQuestions = [
     }
   ];
 
-  
