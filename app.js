@@ -22,3 +22,8 @@ const buttonClick = (event) => {
     console.log(event.target.textContent)
   }
 }
+
+//store button click for q1
+submit.addEventListener('click', function() {
+  console.log('clicked!')
+})
