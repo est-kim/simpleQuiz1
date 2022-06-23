@@ -4,7 +4,11 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Food & Drink Quiz</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
+    />
     <link rel="stylesheet" href="style.css" />
   </head>
 
@@ -12,80 +16,22 @@
     <!-- Create a one-page quiz. Show all questions at once.  -->
     <!-- When the user completes the quiz and hits the Submit button, the quiz will be graded and their score will be shown on the screen. -->
     <!-- BONUS: add a timer such that if the user runs out of time, the quiz is graded immediately (unanswered questions count as incorrect   -->
+    <section>
+      <h1 class="title is-size-1 has-text-centered">Food & Drink Quiz</h1>
+      <div id="quiz" class="container px-0 pt-4"></div>
 
-    <h1>Food & Drink Quiz</h1>
-    <div id="quiz"></div>
+      <button id="submit">Submit Quiz</button>
+      <button id="retry" type="retry">Try Again</button>
+      <p id="output"></p>
 
-    <!-- <p class="question">1. In which country do red onions originate?</p>
-    <ul class="answers">
-      <input type="radio" name="q1" class="q1" value="a" id="q1a" /><label
-        for="q1a"
-        >China</label
-      ><br />
-      <input type="radio" name="q1" class="q1" value="b" id="q1b" /><label
-        for="q1b"
-        >South Africa</label
-      ><br />
-      <input type="radio" name="q1" class="q1" value="correct" id="q1c" /><label
-        for="q1c"
-        >Italy</label
-      ><br />
-      <input type="radio" name="q1" class="q1" value="d" id="q1d" /><label
-        for="q1d"
-        >France</label
-      ><br />
-    </ul>
-
-    <p class="question">
-      2. What is the most popular soup flavor sold in the UK?
-    </p>
-    <ul class="answers">
-      <input type="radio" name="q2" class="q2" value="correct" id="q2a" /><label
-        for="q2a"
-        >Tomato</label
-      ><br />
-      <input type="radio" name="q2" class="q2" value="b" id="q2b" /><label
-        for="q2b"
-        >Split Pea and Barley</label
-      ><br />
-      <input type="radio" name="q2" class="q2" value="c" id="q2c" /><label
-        for="q2c"
-        >Potato and Leek</label
-      ><br />
-      <input type="radio" name="q2" class="q2" value="d" id="q2d" /><label
-        for="q2d"
-        >Chicken and Mushroom</label
-      ><br />
-    </ul> -->
-
-    <!-- <p class="question">3. What type of pastry are profiteroles made out of?</p>
-    <ul class="answers">
-      <input type="radio" name="q3" class="q3" value="a" id="q3a" /><label for="q3a"
-        >Phyllo Pastry</label
-      ><br />
-      <input type="radio" name="q3" class="q3" value="b" id="q3b" /><label for="q3b"
-        >Choux Pastry</label
-      ><br />
-      <input type="radio" name="q3" class="q3" value="c" id="q3c" /><label for="q3c"
-        >Croissant Dough</label
-      ><br />
-      <input type="radio" name="q3" class="q3" value="d" id="q3d" /><label for="q3d"
-        >Flaky Pastry</label
-      ><br />
-    </ul> -->
-
-    <button id="submit">Submit Quiz</button>
-    <button id="retry" type="retry">Try Again</button>
-    <p id="output"></p>
-
-    <div id="answerKey">
-      <div id="results">0</div>
-      <!-- <p>
-        <strong>Question 1:</strong> The correct answer is
-        <strong>Option 1</strong>.
-      </p> -->
-    </div>
-
-    <script src="app.js"></script>
+      <div id="answerKey">
+        <div id="results">0</div>
+        <!-- <p>
+      <strong>Question 1:</strong> The correct answer is
+      <strong>Option 1</strong>.
+    </p> -->
+      </div>
+      <script src="app.js"></script>
+    </section>
   </body>
 </html>

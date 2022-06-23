@@ -23,7 +23,7 @@ const myQuestions = [
     optionB: "South Africa",
     optionC: "Italy",
     optionD: "France",
-    answer: 'c'
+    answer: "c"
   }, 
   {
     questionText: "What is the most popular soup flavor sold in the UK?",
@@ -31,7 +31,7 @@ const myQuestions = [
     optionB: "Split Pea and Barley",
     optionC: "Potato and Leek",
     optionD: "Chicken and Mushroom",
-    answer: 'a'
+    answer: "a"
   },
   {
     questionText: "What type of pastry are profiteroles made out of?",
@@ -39,30 +39,86 @@ const myQuestions = [
     optionB: "Choux Pastry",
     optionC: "Croissant Dough",
     optionD: "Flaky Pastry",
-    answer: 'b'
+    answer: "b"
+  },
+  {
+    questionText: "Grenadine is obtained from which fruit?",
+    optionA: "Maraschino Cherry",
+    optionB: "Meyer Lemon",
+    optionC: "Black Cherry",
+    optionD: "Pomegranate",
+    answer: "d"
+  },
+  {
+    questionText: "How many kernels will you find on an average ear of corn?",
+    optionA: "200",
+    optionB: "400",
+    optionC: "600",
+    optionD: "800",
+    answer: "d"
+  },
+  {
+    questionText: "How many segments are in most oranges?",
+    optionA: "6",
+    optionB: "8",
+    optionC: "10",
+    optionD: "12",
+    answer: "c"
+  },
+  {
+    questionText: "Which is the most stolen food in the world?",
+    optionA: "Beef Ribs",
+    optionB: "Bread",
+    optionC: "Cheese",
+    optionD: "Rice",
+    answer: "c"
+  },
+  {
+    questionText: "What is the most widely eaten meat in the world?",
+    optionA: "Pork",
+    optionB: "Beef",
+    optionC: "Chicken",
+    optionD: "Fish",
+    answer: "a"
+  },
+  {
+    questionText: "In which country was ice cream invented?",
+    optionA: "Mexico",
+    optionB: "China",
+    optionC: "Italy",
+    optionD: "Germany",
+    answer: "b"
+  },
+  {
+    questionText: "What was the first food eaten in space?",
+    optionA: "Chocolate Bar",
+    optionB: "Peanuts",
+    optionC: "Beef Jerky",
+    optionD: "Applesauce",
+    answer: "d"
   }
 ]
 
 const i = 1;
 let questionHTML = ''
 for (let i = 1; i <= myQuestions.length; i++) {
-  questionHTML += `<p class="question">${myQuestions[i-1].questionText}</p>
+  questionHTML += `<p class="question is-size-5 has-text-weight-semibold">${myQuestions[i-1].questionText}</p>
   <ul class="answers">
     <input type="radio" name="q${i}" class="q${i}" value="a" id="q${i}a" /><label
       for="q${i}a"
-      >${myQuestions[i-1].optionA}</label
+      > ${myQuestions[i-1].optionA}</label
     ><br />
     <input type="radio" name="q${i}" class="q${i}" value="b" id="q${i}b" /><label
       for="q${i}b"
-      >${myQuestions[i-1].optionB}</label
+      > ${myQuestions[i-1].optionB}</label
     ><br />
     <input type="radio" name="q${i}" class="q${i}" value="c" id="q${i}c" /><label
       for="q${i}c"
-      >${myQuestions[i-1].optionC}</label
+      > ${myQuestions[i-1].optionC}</label
     ><br />
     <input type="radio" name="q${i}" class="q${i}" value="d" id="q${i}d" /><label
       for="q${i}d"
-      >${myQuestions[i-1].optionD}</label
+      > ${myQuestions[i-1].optionD}</label
     ><br />
   </ul>`
 
