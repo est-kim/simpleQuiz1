@@ -13,6 +13,7 @@ let quizRunning = true
 let score = 0
 let isGameOver = false
 retry.style.visibility = 'hidden'
+results.style.visibility = 'hidden'
 
 // answerKey.style.visibility = 'hidden'
 
