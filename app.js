@@ -197,12 +197,13 @@ submit.addEventListener('click', function() {
       } 
     }
   }
+  results.innerText = `Score: ${score}/100`
   // output.innerText = selectedAnswer1 ? `You selected ${selectedAnswer1}` : `You haven't selected`
 })
 
 incrementScore = num => {
   score += num
-  results.innerText = `Score: ${score}`
+
 }
 
 
