@@ -1,4 +1,4 @@
-const submit = document.querySelector('#submit')
+const submit = document.getElementById('submit')
 const retry = document.querySelector('#retry')
 // const q1choices = document.querySelectorAll('input[name="q1"]')
 // const q2choices = document.querySelectorAll('input[name="q2"]')
@@ -116,7 +116,7 @@ for (let i = 1; i <= myQuestions.length; i++) {
       for="q${i}c"
       > ${myQuestions[i-1].optionC}</label
     ><br />
-    <input type="radio" name="q${i}" class="q${i}" value="d" id="q${i}d" /><label
+    <input type="radio" name="q${i}" class="q${i} block" value="d" id="q${i}d" /><label
       for="q${i}d"
       > ${myQuestions[i-1].optionD}</label
     ><br />
@@ -171,10 +171,12 @@ newQuiz()
 
 // const q1choices = document.querySelectorAll('input[name="q1"]')
 
-submit.addEventListener('click', function(e) {
-  e.preventDefault();
+submit.addEventListener('click', function() {
+  // e.preventDefault();
   isGameOver = true
   retry.style.visibility = 'visible'
+  results.style.visibility = 'visible'
+  submit.disabled = true
   for(let qIndex = 1; qIndex <= myQuestions.length; qIndex++) {  
     // let myClass = "q" + qIndex;
     // console.log(myClass)
@@ -199,13 +201,14 @@ submit.addEventListener('click', function(e) {
 
 incrementScore = num => {
   score += num
-  results.innerText = score
+  results.innerText = `Score: ${score}`
 }
 
 
 retry.addEventListener('click', function(e) {
   isGameOver = false
   retry.style.visibility = 'hidden'
+  submit.disabled = false
   allInp = document.getElementsByTagName("input")
   for (let i = 0; i < allInp.length; i++) {
   if (allInp[i].type == "radio") {
@@ -214,4 +217,5 @@ retry.addEventListener('click', function(e) {
 }
   score = 0
   results.innerText = 0
+  results.style.visibility = 'hidden'
 })

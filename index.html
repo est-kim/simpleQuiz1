@@ -18,14 +18,29 @@
     <!-- BONUS: add a timer such that if the user runs out of time, the quiz is graded immediately (unanswered questions count as incorrect   -->
     <section>
       <h1 class="title is-size-1 has-text-centered">Food & Drink Quiz</h1>
-      <div id="quiz" class="container px-0 pt-4"></div>
 
-      <button id="submit">Submit Quiz</button>
-      <button id="retry" type="retry">Try Again</button>
+      <div class="card">
+        <div class="card-image has-text-centered">
+          <figure class="image is-256x256 is-inline-block">
+            <img
+              src="https://post.healthline.com/wp-content/uploads/2020/08/friends-eating-and-drinking-together-thumb.jpg"
+            />
+          </figure>
+          </div>
+
+
+      <div id="quiz" class="container px-0 pt-4"></div>
+      <div class="block"></div>
+      <div class="buttons is-centered">
+        <button class="button" id="submit">Submit Quiz</button>
+        <button class="button" id="retry" type="retry">Try Again</button>
+      </div>
       <p id="output"></p>
 
       <div id="answerKey">
-        <div id="results">0</div>
+        <div class="block"></div>
+        <div class="is-size-3 has-text-centered mp-6" id="results">0</div>
+
         <!-- <p>
       <strong>Question 1:</strong> The correct answer is
       <strong>Option 1</strong>.
